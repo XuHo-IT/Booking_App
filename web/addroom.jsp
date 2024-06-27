@@ -68,13 +68,9 @@
                                 <input type="file" class="form-control" id="image" name="image">
                             </div>
                             <button type="submit" class="btn btn-primary">Add Room</button>
-                        </form>
-                        <c:if test="${not empty failedMsg}">
-                            <div class="alert alert-danger mt-3">${failedMsg}</div>
-                        </c:if>
-                        <c:if test="${not empty succMsg}">
-                            <div class="alert alert-success mt-3">${succMsg}</div>
-                        </c:if>
+                        </form> 
+                                                    <button type="submit" class="btn btn-primary" onclick="window.location.href='roomadmin.jsp'">Return</button>
+
                     </div>
                 </div>
             </div>

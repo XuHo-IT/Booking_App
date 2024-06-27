@@ -64,6 +64,7 @@
             <p>Capacity: <%= room.getCapacity() %></p>
             <p>Status: <%= room.getStatus() %></p>
             <p>Messages: <%= room.getMessages() %></p>
+            <!-- Add button to confirm bill -->
             <h2>Stay Details</h2>
             <table>
                 <tr>
@@ -73,6 +74,7 @@
                     <th>Price per Night</th>
                     <th>Number of Nights</th>
                     <th>Total Amount</th>
+                    <th>Request</th>
                 </tr>
                 <tr>
                     <td><%= bill.getDateIn() %></td>
@@ -81,9 +83,33 @@
                     <td>$<%= room.getPrice() %></td>
                     <td><%= (bill.getDateOut().getTime() - bill.getDateIn().getTime()) / (1000 * 60 * 60 * 24) %></td>
                     <td>$<%= bill.getPrice() %></td>
+                    <td><%=bill.getRequest()%></td>
                 </tr>
             </table>
-        </div>
+        </div>   
     </div>
+<button class="confirm-button" onclick="confirmBill()">Confirm Bill</button>
+
+<style>
+        .confirm-button {
+            float: right; /* Align button to the right */
+            font-size: 18px; /* Adjust font size */
+            padding: 10px 20px; /* Adjust padding */
+            margin-top: 20px; /* Optional margin top for spacing */
+        }
+    </style>
+    <!-- JavaScript function to handle confirmation -->
+    
+    <script>
+        function confirmBill() {
+            if (confirm("Are you sure you want to confirm this bill?")) {
+                window.location.href = "thanks.jsp"; // Redirect to thanks.jsp
+            } else {
+                // Optionally handle what happens when "No" is clicked
+                // For example, you could display a message or do nothing
+            }
+        }
+    </script>
 </body>
+
 </html>

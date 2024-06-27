@@ -425,7 +425,7 @@
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Rooms</h6>
-            <h1 class="mb-5">Awesome Rooms</h1>
+            <h1 class="mb-5">Available Rooms</h1>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -438,7 +438,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="room-item">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/room-1.jpg" alt="">
+                        <img class="img-fluid" src="img/<%= room.getPhotoName() %>" alt="Room Image">
                     </div>
 
                     <div class="d-flex border-bottom">
@@ -455,22 +455,25 @@
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                         </div>
-                        <p>Cozy room with essential amenities, perfect for a comfortable stay with a garden view.</p>
-                        <div class="d-flex justify-content-center mb-2">
+                        <p><%=room.getMessages()%>.</p>
+                        <div class="mb-3">
                             <form action="BillController" method="post">
                                 <input type="hidden" name="roomId" value="<%= room.getRoomId()%>">
                                 <label for="checkin">Check-in:</label>
-                                <input type="date" name="checkin" required>
+                                <input type="date" id="checkin" name="checkin" required>
                                 <br>
                                 <label for="checkout">Check-out:</label>
-                                <input type="date" name="checkout" required>
+                                <input type="date" id="checkout" name="checkout" required>
                                 <br>
                                 <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Book Now</button>
                             </form>
                         </div>
+                        <form>
+                            <label for="requests">Your request</label>
+                            <input type="text" id="requests" name="requests" class="form-control">
+                        </form>
                     </div>
                 </div>
-
             </div>
             <%
                 }

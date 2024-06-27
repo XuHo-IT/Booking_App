@@ -18,18 +18,30 @@ public class Bill {
     private Date dateOut;
     private float price;
     private String roomType;
+    private String request;
+
+    public Bill(String user, int billNo, int peopleNumber, String resortAddress, Date dateIn, Date dateOut, float price, String roomType, String request) {
+        this.user = user;
+        this.billNo = billNo;
+        this.peopleNumber = peopleNumber;
+        this.resortAddress = resortAddress;
+        this.dateIn = dateIn;
+        this.dateOut = dateOut;
+        this.price = price;
+        this.roomType = roomType;
+        this.request = request;
+    }
+
+    public String getRequest() {
+        return request;
+    }
+
+    public void setRequest(String request) {
+        this.request = request;
+    }
 
     
-    public Bill(String user, int billNo, int peopleNumber, String resortAddress, Date dateIn, Date dateOut, float price, String roomType) {
-      this.user = user;
-      this.billNo = billNo;
-      this.peopleNumber = peopleNumber;
-      this.resortAddress = resortAddress;
-      this.dateIn = dateIn;
-      this.dateOut = dateOut;
-      this.price = price;
-      this.roomType = roomType;
-   }
+    
     public Bill() {
         
     }

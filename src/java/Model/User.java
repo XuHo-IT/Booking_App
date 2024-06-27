@@ -15,23 +15,16 @@ public class User {
     private String userName;
     private String email;
     private String password;
-    private int type;
 
-    public User(int Id, String userName, String email, String password, int type) {
+
+    public User(int Id, String userName, String email, String password) {
         this.Id = Id;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.type = type;
-    }
+            }
 
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
+   
 
     public int getId() {
         return Id;

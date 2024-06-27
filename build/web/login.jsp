@@ -294,10 +294,12 @@
             <a href="#" class="social"><i class="fab fa-github"></i></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Account" name="name"/>
+          <input type="text" placeholder="Name" name="name"/>
           <input type="email" placeholder="Email" name="email"/>
           <input type="password" placeholder="Password" name="password"/>
+          <input type="hidden" name="registrationType" value="1">
           <button>Sign Up</button>
+             <a href="loginadmin.jsp">Sign up by admin</a>
         </form>
       </div>
       <div class="form-container sign-in-container">
@@ -311,7 +313,9 @@
           <span>or use your account</span>
           <input type="email" placeholder="Email" name="email" />
           <input type="password" placeholder="Password" name="password"/>
+          <input type="hidden" name="registrationType" value="1">
           <button>Sign In</button>
+          <a href="loginadmin.jsp">Login by admin</a>
         </form>
       </div>
       <div class="overlay-container">

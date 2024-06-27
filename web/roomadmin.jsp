@@ -165,13 +165,10 @@
                                 <label for="checkout">Check-out:</label>
                                 <input type="date" id="checkout" name="checkout" required>
                                 <br>
-                                <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Book Now</button>
+                                
                             </form>
                         </div>
-                        <form>
-                            <label for="requests">Your request</label>
-                            <input type="text" id="requests" name="requests" class="form-control">
-                        </form>
+                        
                     </div>
                 </div>
             </div>

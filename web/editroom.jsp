@@ -54,7 +54,146 @@
         <link href="css/style.css" rel="stylesheet" />
     </head>
     <body>
-        <%@include file="header.jsp"%>
+        <body class="main-color-web">
+        <!-- Spinner Start -->
+        <div
+            id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+            >
+            <div
+                class="spinner-border text-primary"
+                style="width: 3rem; height: 3rem"
+                role="status"
+                >
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid gradient-1 px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px">
+                        <small class="me-3 text-light"
+                               ><i class="fa fa-map-marker-alt me-2"></i>Khu ?ô th? FPT City, Ng?
+                            Hành S?n, ?à N?ng</small
+                        >
+                        <small class="me-3 text-light"
+                               ><i class="fa fa-phone-alt me-2"></i>+0352736104</small
+                        >
+                        <small class="text-light"
+                               ><i class="fa fa-envelope-open me-2"></i
+                            >hoantxde180175@fpt.edu.vn</small
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px">
+                        <a
+                            class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                            href="https://x.com/HuyLongDev"
+                            rel="noopener"
+                            target="_blank"
+                            ><i class="fab fa-twitter fw-normal"></i
+                            ></a>
+                        <a
+                            class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                            href="https://www.facebook.com/hoa.ngotran.986"
+                            rel="noopener"
+                            target="_blank"
+                            ><i class="fab fa-facebook-f fw-normal"></i
+                            ></a>
+                        <a
+                            class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                            href="https://www.linkedin.com/in/thành-nguy?n-lê-??ng-834bb8285/"
+                            rel="noopener"
+                            target="_blank"
+                            ><i class="fab fa-linkedin-in fw-normal"></i
+                            ></a>
+                        <a
+                            class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                            href="https://www.instagram.com/_.xuho._/"
+                            rel="noopener"
+                            target="_blank"
+                            ><i class="fab fa-instagram fw-normal"></i
+                            ></a>
+                        <a
+                            class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                            href="https://github.com/huylongdev"
+                            rel="noopener"
+                            target="_blank"
+                            ><i class="fab fa-github fw-normal"></i
+                            ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav
+                class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+                >
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">
+                        <div class="wrapper invert">
+                            <span data-text="FPT"></span>
+                            <span data-text="PARADISE"></span>
+                        </div>
+                    </h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    >
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                       
+                        <a href="roomadmin.jsp" class="nav-item nav-link">Rooms</a>
+                       
+                       
+                    </div>
+                </div >
+                <div class="nav-item dropdown">
+                    <a
+                        href="#"
+                        class="nav-link dropdown-toggle"
+                        data-toggle="dropdown"
+                        >
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu m-0">
+                        <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
+                        <a href="#" class="drodown-item">Bill</a>
+                    </div>
+                </div>
+        </div>
+       
+    </nav>
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">
+                        Enjoy Your Vacation With FPT Villas
+                    </h1>
+                    <p class="fs-4 text-white mb-4 animated slideInDown">
+                        Modern villas, seamlessly blending with nature.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-3">

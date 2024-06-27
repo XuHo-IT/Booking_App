@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package DAO;
 
 import DBConnect.DBConnect;
@@ -30,7 +26,7 @@ public class UserDAO {
      public boolean userRegister(User user){
          boolean f = false;
          try{
-            String query = "insert into [User](userName,email,password) values (?,?,?)";
+            String query = "insert into [User](name,email,password) values (?,?,?)";
             PreparedStatement pstmt = this.conn.prepareStatement(query);
             pstmt.setString(1, user.getUserName());
             pstmt.setString(2, user.getEmail());
@@ -65,13 +61,13 @@ public class UserDAO {
         public List<User> getUsers() {
         List<User> list = new ArrayList<>();
         try {
-            String query = "SELECT userId, userName, email, password FROM [Booking].[dbo].[User]";
+            String query = "SELECT userId, name, email, password FROM [Booking].[dbo].[User]";
             pstmt = this.conn.prepareStatement(query);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 User user = new User();
                 user.setId(rs.getInt("userId"));
-                user.setUserName(rs.getString("userName"));
+                user.setUserName(rs.getString("Name"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
                 list.add(user);
