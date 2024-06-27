@@ -4,11 +4,39 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>Controller.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginAdminController</servlet-name>
+        <servlet-class>Controller.LoginAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterAdminController</servlet-name>
+        <servlet-class>Controller.RegisterAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddroomController</servlet-name>
+        <servlet-class>Controller.AddroomController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditRoom</servlet-name>
+        <servlet-class>Controller.EditRoom</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteRoomController</servlet-name>
+        <servlet-class>Controller.DeleteRoomController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
     </servlet-mapping>
-     <servlet>
+    <servlet>
+        <servlet-name>RegisterController</servlet-name>
+        <servlet-class>Controller.RegisterController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterController</servlet-name>
+        <url-pattern>/RegisterController</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>LogoutController</servlet-name>
         <servlet-class>Controller.LogoutController</servlet-class>
     </servlet>
@@ -27,6 +55,26 @@
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>LoginAdminController</servlet-name>
+        <url-pattern>/LoginAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterAdminController</servlet-name>
+        <url-pattern>/RegisterAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddroomController</servlet-name>
+        <url-pattern>/AddroomController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditRoom</servlet-name>
+        <url-pattern>/EditRoom</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteRoomController</servlet-name>
+        <url-pattern>/DeleteRoomController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
