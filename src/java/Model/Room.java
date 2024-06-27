@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Model;
 
-/**
- *
- * @author PC
- */
 public class Room {
     private int roomId;
     private String roomtype;
@@ -16,8 +8,9 @@ public class Room {
     private String status;
     private String messages;
     private String userId;
+    private String photoName;
 
-    public Room(int roomId, String roomtype, int capacity, float price, String status, String messages, String userId) {
+    public Room(int roomId, String roomtype, int capacity, float price, String status, String messages, String userId, String photoName) {
         this.roomId = roomId;
         this.roomtype = roomtype;
         this.capacity = capacity;
@@ -25,6 +18,18 @@ public class Room {
         this.status = status;
         this.messages = messages;
         this.userId = userId;
+        this.photoName = photoName;
+    }
+
+    public Room() {
+    }
+
+    public String getPhotoName() {
+        return photoName;
+    }
+
+    public void setPhotoName(String photoName) {
+        this.photoName = photoName;
     }
 
     public int getRoomId() {
@@ -82,15 +87,4 @@ public class Room {
     public void setUserId(String userId) {
         this.userId = userId;
     }
-
-  
- 
-
-    public Room() {
-    }
-
-   
-
-   
-    
 }
