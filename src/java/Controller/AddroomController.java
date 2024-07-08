@@ -87,7 +87,7 @@ public class AddroomController extends HttpServlet {
             int adminId = admin.getId();
 
             RoomDAO dao = new RoomDAO(DBConnect.getConn());
-            boolean f = dao.addRooms(b, adminId);
+            boolean f = dao.addRoom(b, adminId);
 
             if (f) {
                 session.setAttribute("succMsg", "Room added successfully");

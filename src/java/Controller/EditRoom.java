@@ -90,7 +90,7 @@ public class EditRoom extends HttpServlet {
             b.setMessages(messages);
             
             RoomDAO dao = new RoomDAO(DBConnect.getConn());
-            boolean f =dao.updatedRooms(b);
+            boolean f =dao.updateRoom(b);
             
             HttpSession session=request.getSession();
             if(f){
