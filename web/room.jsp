@@ -146,7 +146,7 @@
         <div class="row g-4 justify-content-center">
             <%
                 RoomDAO dao = new RoomDAO(DBConnect.getConn());
-                List<Room> list = dao.Rooms();
+                List<Room> list = dao.getRooms();
                 for (Room room : list) {
             %>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

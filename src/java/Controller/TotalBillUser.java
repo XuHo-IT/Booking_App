@@ -81,7 +81,7 @@ public class TotalBillUser extends HttpServlet {
 
     if (user != null) {
         String userName = user.getUserName(); // Assuming user.getId() retrieves the userId from User object
-        int userId = Integer.parseInt(userName);
+        int userId = user.getId();
         BillDAO dao = new BillDAO(DBConnect.getConn());
         List<Bill> bills = dao.getBillsByUserId(userId); // Retrieve bills for the user
         if (!bills.isEmpty()) {

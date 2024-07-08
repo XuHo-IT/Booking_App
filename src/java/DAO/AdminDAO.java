@@ -46,10 +46,10 @@ public class AdminDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 admin = new Admin();
-                admin.setId(rs.getInt(4));
-                admin.setName(rs.getString(1));
-                admin.setEmail(rs.getString(2));
-                admin.setPassword(rs.getString(3));
+                admin.setId(rs.getInt(1));
+                admin.setName(rs.getString(2));
+                admin.setEmail(rs.getString(3));
+                admin.setPassword(rs.getString(4));
             }
         } catch (Exception e) {
             e.printStackTrace();

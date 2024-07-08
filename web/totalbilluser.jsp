@@ -61,7 +61,7 @@
     <%-- Retrieve bills for the logged-in user --%>
     <%
         BillDAO dao = new BillDAO(DBConnect.getConn());
-        List<Bill> list = dao.getBillsByUserId(Integer.parseInt(user.getUserName()));
+        List<Bill> list = dao.getBillsByUserId(user.getId());
 //       (List<Bill>) request.getAttribute("bills");
     %>
 
@@ -72,7 +72,7 @@
         </div>
         <div class="bill-details">
             <h2>User Information</h2>
-            <p>Username: <%= user.getPassword() %></p>
+            <p>Username: <%= user.getUserName() %></p>
             <p>Email: <%= user.getEmail() %></p>
         </div>
         <div class="bill-details">

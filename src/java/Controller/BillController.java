@@ -37,8 +37,8 @@ public class BillController extends HttpServlet {
     User user = (User) session.getAttribute("currentUser");
 
     if (user != null) {
-        int userId = Integer.parseInt(user.getUserName()); 
-        String userName = user.getPassword();
+        int userId =user.getId(); 
+        String userName = user.getUserName();
         String userMail = user.getEmail();
         int roomId = Integer.parseInt(request.getParameter("roomId"));
         Date checkin = Date.valueOf(request.getParameter("checkin"));
