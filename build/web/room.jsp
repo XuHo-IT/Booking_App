@@ -84,22 +84,34 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="about.jsp" class="nav-item nav-link">About</a>
+                        <a href="service.jsp" class="nav-item nav-link">Services</a>
                         <a href="room.jsp" class="nav-item nav-link active">Rooms</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="destination.jsp" class="dropdown-item">Destination</a>                             
+                                <a href="team.jsp" class="dropdown-item">Travel Guides</a>
+                                <a href="testimonial.jsp" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.jsp" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="register.jsp" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                      <div class="nav-item dropdown">
+                    <a
+                        href="#"
+                        class="nav-link dropdown-toggle"
+                        data-toggle="dropdown"
+                        >
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu m-0">
+                        <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
+                        <form action="TotalBillUser" method="post">
+                      <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Bill Detail</button>
+                        </form>
+                    </div>
+                </div>
                 </div>
             </nav>
 
@@ -145,7 +157,7 @@
 
                     <div class="d-flex border-bottom">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i><%=room.getRoomtype()%></small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>...</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i><%=room.getStatus()%></small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i><%=room.getCapacity()%></small>
                     </div>
                     <div class="text-center p-4">
@@ -168,12 +180,14 @@
                                 <input type="date" id="checkout" name="checkout" required>
                                 <br>
                                 <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Book Now</button>
+                                <br>
+                                 <form>
+                            <label for="requests">Your request</label>
+                            <input type="text" name="requests" class="form-control">
+                        </form>
                             </form>
                         </div>
-                        <form>
-                            <label for="requests">Your request</label>
-                            <input type="text" id="requests" name="requests" class="form-control">
-                        </form>
+                       
                     </div>
                 </div>
             </div>

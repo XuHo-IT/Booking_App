@@ -156,8 +156,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html?" class="nav-item nav-link">Services</a>
+                        <a href="about.jsp" class="nav-item nav-link">About</a>
+                        <a href="service.jsp" class="nav-item nav-link">Services</a>
                         <a href="room.jsp" class="nav-item nav-link">Rooms</a>
                         <div class="nav-item dropdown">
                             <a
@@ -167,14 +167,13 @@
                                 >Pages</a
                             >
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="destination.jsp" class="dropdown-item">Destination</a>
+                                <a href="team.jsp" class="dropdown-item">Travel Guides</a>
+                                <a href="testimonial.jsp" class="dropdown-item">Testimonial</a>
+                           
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.jsp" class="nav-item nav-link">Contact</a>
                     </div>
                 </div >
                 <div class="nav-item dropdown">
@@ -187,7 +186,9 @@
                     </a>
                     <div class="dropdown-menu m-0">
                         <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
-                        <a href="#" class="drodown-item">Bill</a>
+                         <form action="TotalBillUser" method="post">
+                      <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Bill Detail</button>
+                        </form>
                     </div>
                 </div>
         </div>

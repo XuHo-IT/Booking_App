@@ -91,7 +91,7 @@ public class AddroomController extends HttpServlet {
 
             if (f) {
                 session.setAttribute("succMsg", "Room added successfully");
-                response.sendRedirect("room.jsp");
+                response.sendRedirect("roomadmin.jsp");
             } else {
                 session.setAttribute("failedMsg", "Failed to add room");
                 response.sendRedirect("addroom.jsp");

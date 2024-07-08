@@ -96,7 +96,7 @@
                     </a>
                     <div class="dropdown-menu m-0">
                         <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
-                        <a href="#" class="drodown-item">Bill</a>
+                        <a href="totalbilladmin.jsp" class="drodown-item">Bill</a>
                     </div>
                 </div>
                 </div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="d-flex border-bottom">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i><%=room.getRoomtype()%></small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>...</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i><%=room.getStatus()%></small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i><%=room.getCapacity()%></small>
                     </div>
                     <a href="editroom.jsp?id=<%= room.getRoomId() %>" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Edit room</a>

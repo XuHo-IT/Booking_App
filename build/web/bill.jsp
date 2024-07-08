@@ -57,7 +57,8 @@
         </div>
         <div class="bill-details">
             <h2>User Information</h2>
-            <p>Name: <%= user.getUserName() %></p>
+            <p>Id: <%= user.getUserName() %></p>
+            <p>Name: <%= user.getPassword() %></p>
             <p>Email: <%= user.getEmail() %></p>
             <h2>Room Information</h2>
             <p>Room Type: <%= room.getRoomtype() %></p>

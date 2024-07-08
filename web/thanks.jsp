@@ -122,8 +122,10 @@
                         <i class="fas fa-user"></i>
                     </a>
                     <div class="dropdown-menu m-0">
-                        <a href="#" class="dropdown-item">Logout</a>
-                        <a href="#" class="dropdown-item">Bill</a>
+                   <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
+                        <form action="TotalBillUser" method="post">
+                      <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Bill Detail</button>
+                        </form>
                     </div>
                 </div>
         </div>

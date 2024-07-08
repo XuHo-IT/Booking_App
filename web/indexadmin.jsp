@@ -172,7 +172,7 @@
                     </a>
                     <div class="dropdown-menu m-0">
                         <a href="LogoutController" data-toggle="modal" data-target="#exampleModal" class="dropdown-item">Logout</a>
-                        <a href="#" class="drodown-item">Bill</a>
+                        <a href="totalbilladmin.jsp" class="drodown-item">Bill</a>
                     </div>
                 </div>
         </div>
@@ -425,12 +425,12 @@
                     <div class="overflow-hidden">
                         <img class="img-fluid" src="img/<%= room.getPhotoName() %>" alt="Room Image">
                     </div>
-
                     <div class="d-flex border-bottom">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i><%=room.getRoomtype()%></small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>...</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i><%=room.getStatus()%></small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i><%=room.getCapacity()%></small>
                     </div>
+                   
                     <div class="text-center p-4">
                         <h3 class="mb-0">$<%=room.getPrice()%> per night</h3>
                         <div class="mb-3">
@@ -440,7 +440,7 @@
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                         </div>
-                        <p><%=room.getMessages()%>.</p>
+                        <p><%=room.getMessages()%></p>
                         <div class="mb-3">
                             <form action="BillController" method="post">
                                 <input type="hidden" name="roomId" value="<%= room.getRoomId()%>">
@@ -450,13 +450,10 @@
                                 <label for="checkout">Check-out:</label>
                                 <input type="date" id="checkout" name="checkout" required>
                                 <br>
-                                <button type="submit" class="btn btn-sm btn-color p-sm-2 px-3" style="border-radius: 30px">Book Now</button>
+                                
                             </form>
                         </div>
-                        <form>
-                            <label for="requests">Your request</label>
-                            <input type="text" id="requests" name="requests" class="form-control">
-                        </form>
+                        
                     </div>
                 </div>
             </div>

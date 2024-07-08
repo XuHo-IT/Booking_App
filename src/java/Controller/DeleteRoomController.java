@@ -58,27 +58,7 @@ public class DeleteRoomController extends HttpServlet {
    @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-    String idParam = request.getParameter("id");
-    System.out.println("Received id: " + idParam); // Debugging statement
-
-    if (idParam == null || idParam.isEmpty()) {
-        System.out.println("id parameter is null or empty");
-        // Handle error, e.g., redirect to an error page
-        response.sendRedirect("editroom.jsp");
-        return;
-    }
-
-    int id = Integer.parseInt(idParam);
-    RoomDAO dao = new RoomDAO(DBConnect.getConn());
-    boolean f = dao.deleRoom(id);
-    HttpSession session = request.getSession();
-    if (f) {
-        session.setAttribute("succMsg", "Book deleted succesfully");
-        response.sendRedirect("roomadmin.jsp");
-    } else {
-        session.setAttribute("failedMsg", "Something went wrong on server");
-        response.sendRedirect("editroom.jsp");
-    }
+   
 }
 
 
@@ -93,7 +73,26 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       String idParam = request.getParameter("id");
+    System.out.println("Received id: " + idParam); // Debugging statement
+
+    if (idParam == null || idParam.isEmpty()) {
+        System.out.println("id parameter is null or empty");
+        // Handle error, e.g., redirect to an error page
+        response.sendRedirect("editroom.jsp");
+        return;
+    }
+    int id = Integer.parseInt(idParam);
+    RoomDAO dao = new RoomDAO(DBConnect.getConn());
+    boolean f = dao.deleRoom(id);
+    HttpSession session = request.getSession();
+    if (f) {
+        session.setAttribute("succMsg", "Book deleted succesfully");
+        response.sendRedirect("roomadmin.jsp");
+    } else {
+        session.setAttribute("failedMsg", "Something went wrong on server");
+        response.sendRedirect("editroom.jsp");
+    }
     }
 
     /**

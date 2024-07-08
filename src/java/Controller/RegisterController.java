@@ -91,7 +91,7 @@ public class RegisterController extends HttpServlet {
                 UserDAO dao = new UserDAO((Connection) DBConnect.getConn());
                 boolean f = dao.userRegister(us);
                 if (f) {
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("login.jsp");
                 } else {
                     response.sendRedirect("login.jsp");
                 }

@@ -61,14 +61,15 @@ public class UserDAO {
         public List<User> getUsers() {
         List<User> list = new ArrayList<>();
         try {
-            String query = "SELECT userId, name, email, password FROM [Booking].[dbo].[User]";
+            String query = "SELECT Id, email,name, password FROM [Booking].[dbo].[User]";
             pstmt = this.conn.prepareStatement(query);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 User user = new User();
-                user.setId(rs.getInt("userId"));
-                user.setUserName(rs.getString("Name"));
-                user.setEmail(rs.getString("email"));
+                user.setId(rs.getInt("id"));
+                                user.setEmail(rs.getString("email"));
+
+                user.setUserName(rs.getString("name"));
                 user.setPassword(rs.getString("password"));
                 list.add(user);
             }

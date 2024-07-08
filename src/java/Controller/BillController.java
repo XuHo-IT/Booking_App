@@ -37,8 +37,9 @@ public class BillController extends HttpServlet {
     User user = (User) session.getAttribute("currentUser");
 
     if (user != null) {
-        int userId = user.getId(); // Assuming user.getId() retrieves the userId from User object
-
+        int userId = Integer.parseInt(user.getUserName()); 
+        String userName = user.getPassword();
+        String userMail = user.getEmail();
         int roomId = Integer.parseInt(request.getParameter("roomId"));
         Date checkin = Date.valueOf(request.getParameter("checkin"));
         Date checkout = Date.valueOf(request.getParameter("checkout"));
@@ -54,11 +55,11 @@ public class BillController extends HttpServlet {
         float totalPrice = room.getPrice() * days;
 
         // Create Bill object
-        Bill bill = new Bill(user.getUserName(), 0, room.getCapacity(), "Resort Address", checkin, checkout, totalPrice, room.getRoomtype(),requests);
+        Bill bill = new Bill( 0, room.getCapacity(), checkin, checkout, totalPrice, room.getRoomtype(),requests);
 
         // Insert into database using BillDAO
         BillDAO dao = new BillDAO((Connection) DBConnect.getConn());
-        boolean isInserted = dao.billOrder(bill, userId);
+        boolean isInserted = dao.billOrder(bill, userId,userName,userMail);
 
         if (isInserted) {
             // Data inserted successfully

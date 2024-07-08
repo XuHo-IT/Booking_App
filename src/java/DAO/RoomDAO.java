@@ -133,7 +133,7 @@ public class RoomDAO {
         public boolean deleRoom(int id) {
         boolean f = false;
         try {
-            String sql = "delete from room where Id=?";
+            String sql = "delete from room where roomId=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             int i = ps.executeUpdate();

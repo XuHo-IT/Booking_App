@@ -207,8 +207,7 @@
                                 int id = Integer.parseInt(request.getParameter("id"));
                                 Room b = dao.getRoomById(id);
                             %>
-                            <form action="EditRoom?id=<%=b.getRoomId()%>" method="post">
-                               
+                            <form action="EditRoom?id=<%=b.getRoomId()%>" method="post">                              
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Room Type</label>
                                     <input type="text" class="form-control" id="type" name="type" value="<%=b.getRoomtype()%>">
@@ -243,8 +242,8 @@
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary">Edit Room</button>
                                 </div>
-                            </form>
-                            <form action="DeleteRoomController?id=<%=b.getRoomId()%>" method="get">
+                            </form>                                  
+                            <form action="DeleteRoomController?id=<%=b.getRoomId()%>" method="post">
                                 <button type="submit" class="btn btn-secondary mt-3" >Delete Room</button>
                             </form>
                         </div>

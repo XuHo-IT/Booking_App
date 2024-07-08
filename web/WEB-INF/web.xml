@@ -24,6 +24,10 @@
         <servlet-name>DeleteRoomController</servlet-name>
         <servlet-class>Controller.DeleteRoomController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TotalBillUser</servlet-name>
+        <servlet-class>Controller.TotalBillUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -74,6 +78,10 @@
     <servlet-mapping>
         <servlet-name>DeleteRoomController</servlet-name>
         <url-pattern>/DeleteRoomController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TotalBillUser</servlet-name>
+        <url-pattern>/TotalBillUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

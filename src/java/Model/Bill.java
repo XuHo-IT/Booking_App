@@ -10,27 +10,29 @@ package Model;
  */
 import java.util.Date;
 public class Bill {
-    private String user;
+    User user;
     private int billNo;
     private int peopleNumber;
-    private String resortAddress;
     private Date dateIn;
     private Date dateOut;
     private float price;
     private String roomType;
     private String request;
 
-    public Bill(String user, int billNo, int peopleNumber, String resortAddress, Date dateIn, Date dateOut, float price, String roomType, String request) {
-        this.user = user;
+    public Bill( int billNo, int peopleNumber, Date dateIn, Date dateOut, float price, String roomType, String request) {
+       
         this.billNo = billNo;
         this.peopleNumber = peopleNumber;
-        this.resortAddress = resortAddress;
         this.dateIn = dateIn;
         this.dateOut = dateOut;
         this.price = price;
         this.roomType = roomType;
         this.request = request;
     }
+
+   
+
+    
 
     public String getRequest() {
         return request;
@@ -47,13 +49,7 @@ public class Bill {
     }
     //getter setter
 
-   public String getUser() {
-      return user;
-   }
-
-   public void setUser(String user) {
-      this.user = user;
-   }
+  
 
    public int getBillNo() {
       return billNo;
@@ -69,14 +65,6 @@ public class Bill {
 
    public void setPeopleNumber(int peopleNumber) {
       this.peopleNumber = peopleNumber;
-   }
-
-   public String getResortAddress() {
-      return resortAddress;
-   }
-
-   public void setResortAddress(String resortAddress) {
-      this.resortAddress = resortAddress;
    }
 
    public Date getDateIn() {
@@ -99,7 +87,7 @@ public class Bill {
       return price;
    }
 
-   public void setPrice(int price) {
+   public void setPrice(float price) {
       this.price = price;
    }
 
@@ -110,20 +98,14 @@ public class Bill {
    public void setRoomType(String roomType) {
       this.roomType = roomType;
    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
    
-   //toString
-   
-   @Override
-   public String toString() {
-      return "Human{" +
-              "user='" + user + '\'' +
-              ", billNo=" + billNo +
-              ", peopleNumber=" + peopleNumber +
-              ", resortAddress='" + resortAddress + '\'' +
-              ", dateIn=" + dateIn +
-              ", dateOut=" + dateOut +
-              ", price=" + price +
-              ", roomType='" + roomType + '\'' +
-              '}';
-   }
+
 }
