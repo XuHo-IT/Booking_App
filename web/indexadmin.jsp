@@ -416,7 +416,7 @@
         <div class="row g-4 justify-content-center">
             <%
                 RoomDAO dao = new RoomDAO(DBConnect.getConn());
-                List<Room> list = dao.Rooms();
+                List<Room> list = dao.getRooms();
                 for (int i = 1; i < 4; i++) {
                     Room room = list.get(i);
             %>

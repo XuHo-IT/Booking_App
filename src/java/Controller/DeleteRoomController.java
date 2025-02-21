@@ -84,7 +84,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
     }
     int id = Integer.parseInt(idParam);
     RoomDAO dao = new RoomDAO(DBConnect.getConn());
-    boolean f = dao.deleRoom(id);
+    boolean f = dao.deleteRoom(id);
     HttpSession session = request.getSession();
     if (f) {
         session.setAttribute("succMsg", "Book deleted succesfully");
