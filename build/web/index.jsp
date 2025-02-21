@@ -669,7 +669,7 @@
                             ></a>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0">Nguyen Thanh Tung</h5>
                         <small>Designation</small>
                     </div>
                 </div>
